@@ -12,9 +12,10 @@ export const Main = () => {
                     {/* H1 on WEB DEVELOPER for a better match when searching the internet */}
                     <StyledTitle>WEB DEVELOPER</StyledTitle>
                     <StyledName>Aliaksei Holad</StyledName>
-                    <p style={{maxWidth: "500px"}}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                    <p style={{maxWidth: "500px"}}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                        sint.
                         Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt.</p>
-                    <button style={{width: "134px", height:"45px"}}>Contact Me</button>
+                    <button style={{width: "134px", height: "45px"}}>Contact Me</button>
                 </div>
                 <Photo src={photo}/>
             </FlexContainer>
@@ -29,8 +30,8 @@ const StyledMain = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  
-  button{
+
+  button {
     margin-top: 20px;
   }
 `
