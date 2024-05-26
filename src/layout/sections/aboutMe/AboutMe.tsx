@@ -23,6 +23,7 @@ const StyledAboutMe = styled.section`
   background-color: blue;
   min-height: 30vh;
 `
+
 const Text = styled.p`
   margin-left: 10px;
 `

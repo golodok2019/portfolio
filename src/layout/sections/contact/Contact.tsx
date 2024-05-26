@@ -2,15 +2,16 @@ import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
+import {Field} from "./field/Field";
 
 export const Contact = () => {
     return (
         <StyledContact>
             <SectionTitle>Contact</SectionTitle>
             <StyledForm>
-                <Field placeholder={"Name"}/>
-                <Field placeholder={"Subject"}/>
-                <Field as={"textarea"} placeholder={"Message"}/>
+                <Field placeholder={"Your name"} fieldLabel={"Name"}/>
+                <Field placeholder={"Your email"} fieldLabel={"Email"}/>
+                <Field placeholder={"Message for me"} fieldLabel={"Message"} isTextArea/>
                 <Button type={"submit"}>Submit</Button>
             </StyledForm>
         </StyledContact>
@@ -30,5 +31,3 @@ const StyledForm = styled.form`
   margin: 0 auto;
   gap: 10px;
 `
-
-const Field = styled.input``

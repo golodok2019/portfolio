@@ -7,6 +7,7 @@ type WorkPropsType = {
     text: string
     src: string
     alt: string
+    technologiesList: Array<string>
 }
 
 export const Work = (props: WorkPropsType) => {
@@ -14,7 +15,7 @@ export const Work = (props: WorkPropsType) => {
         <StyledWork>
             <Image src={props.src} alt={props.alt}/>
             <Title>{props.title}</Title>
-            <Technologies></Technologies>
+            <Technologies technologiesList={props.technologiesList}/>
             <Text>{props.text}</Text>
             <Link href={"#"}>demo</Link>
             <Link href={"#"}>code</Link>

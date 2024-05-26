@@ -13,12 +13,14 @@ export const Works = () => {
                 <Work title={"TITLE PROJECT"}
                       text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}
                       src={projectImage}
-                      alt={"My project"}/>
+                      alt={"My project"}
+                      technologiesList={["javascript", "typescript"]}/>
 
                 <Work title={"I N S I G H T G R A M"}
                       text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}
                       src={projectImage}
-                      alt={"My project"}/>
+                      alt={"My project"}
+                      technologiesList={["C#", "typescript", "React"]}/>
 
             </FlexContainer>
         </StyledWorks>

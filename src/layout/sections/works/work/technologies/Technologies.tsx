@@ -1,9 +1,23 @@
 import React from 'react';
+import styled from "styled-components";
+import {Technology} from "./technology/technology";
 
-export const Technologies = () => {
+type TechnologiesPropsType = {
+    technologiesList: Array<string>
+}
+
+export const Technologies = (props: TechnologiesPropsType) => {
     return (
-        <div>
-
-        </div>
+        <StyledTechnologies>
+            {props.technologiesList.map((technologyName)=>{
+                return <Technology technologyName={technologyName}/>
+            })}
+        </StyledTechnologies>
     );
 };
+
+const StyledTechnologies = styled.div`
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+`
