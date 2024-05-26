@@ -18,3 +18,10 @@ export const Icon = (props: IconPropsType) => {
 
     );
 };
+
+export const IconGit = () => {
+    return <svg width={"39"} height={"38"} viewBox={"0 0 39 38"}
+         fill="none" xmlns="http://www.w3.org/2000/svg">
+        <use xlinkHref={`Vector`}/>
+    </svg>
+}

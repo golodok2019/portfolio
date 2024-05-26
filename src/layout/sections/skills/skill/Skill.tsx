@@ -5,12 +5,13 @@ import styled from "styled-components";
 type SkillPropsType = {
     iconId: string
     skillTitle: string
+    viewBox?: string
 }
 
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon iconId={props.iconId} width={"120px"} height={"120px"} viewBox={"0 0 120 120"}/>
+            <Icon iconId={props.iconId} width={"120px"} height={"120px"} viewBox={props.viewBox || "0 0 120 120"}/>
             <SkillTitle>{props.skillTitle}</SkillTitle>
         </StyledSkill>
     );

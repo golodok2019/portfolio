@@ -19,7 +19,7 @@ export const Skills = () => {
                 <Skill iconId={"reactNative"} skillTitle={"REACT NATIVE"}/>
                 <Skill iconId={"styledComponents"} skillTitle={"STYLED COMPONENTS"}/>
                 <Skill iconId={"redux"} skillTitle={"REDUX"}/>
-                <Skill iconId={"git"} skillTitle={"GIT"}/>
+                <Skill iconId={"git"} skillTitle={"GIT"} viewBox={"0 0 256 256"}/>
             </FlexContainer>
         </StyledSkills>
     );
