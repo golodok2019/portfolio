@@ -17,7 +17,7 @@ export const Main = () => {
                         Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt.</p>
                     <button style={{width: "134px", height: "45px"}}>Contact Me</button>
                 </div>
-                <Photo src={photo}/>
+                <Photo src={photo} alt={"My photo"}/>
             </FlexContainer>
             <Icon iconId={"scrollDarkTheme"}/>
         </StyledMain>

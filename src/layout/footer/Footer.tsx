@@ -10,17 +10,17 @@ export const Footer = () => {
                 <Name>Aliaksei Holad</Name>
                 <FooterItemsList>
                     <FooterItem>
-                        <FooterLink>
+                        <FooterLink aria-label={"LinkedIn"} >
                             <Icon iconId={"linkedInDarkTheme"}/>
                         </FooterLink>
                     </FooterItem>
                     <FooterItem>
-                        <FooterLink>
+                        <FooterLink aria-label={"Mail"} >
                             <Icon iconId={"mail"}/>
                         </FooterLink>
                     </FooterItem>
                     <FooterItem>
-                        <FooterLink>
+                        <FooterLink aria-label={"GitHub"} >
                             <Icon iconId={"gitHubDarkTheme"}/>
                         </FooterLink>
                     </FooterItem>

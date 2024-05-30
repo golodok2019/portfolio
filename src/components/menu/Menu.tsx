@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 export const Menu = () => {
     return (
-        <StyledMenu>
+        <StyledMenu role={"menu"}>
             <ul>
-                <li>
-                    <a href={""}>Home</a>
+                <li role={"menuitem"}>
+                    <a href={"#"}>Home</a>
                 </li>
-                <li>
-                    <a href={""}>Projects</a>
+                <li role={"menuitem"}>
+                    <a href={"#"}>Projects</a>
                 </li>
-                <li>
-                    <button>Contact</button>
+                <li role={"menuitem"}>
+                    <a href={"#"}>Contact</a>
                 </li>
             </ul>
         </StyledMenu>
