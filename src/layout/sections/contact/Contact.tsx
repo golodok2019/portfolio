@@ -9,9 +9,9 @@ export const Contact = () => {
         <StyledContact>
             <SectionTitle>Contact</SectionTitle>
             <StyledForm>
-                <Field placeholder={"Your name"} fieldLabel={"Name"}/>
-                <Field placeholder={"Your email"} fieldLabel={"Email"}/>
-                <Field placeholder={"Message for me"} fieldLabel={"Message"} isTextArea/>
+                <Field placeholder={"Your name"} fieldLabel={"Name"} inputIdAndName={"name"}/>
+                <Field placeholder={"Your email"} fieldLabel={"Email"} inputIdAndName={"email"} inputType={"email"}/>
+                <Field placeholder={"Message for me"} fieldLabel={"Message"} inputIdAndName={"message"} isTextArea/>
                 <Button type={"submit"}>Submit</Button>
             </StyledForm>
         </StyledContact>
@@ -20,7 +20,6 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
   min-height: 50vh;
-  background-color: cornflowerblue;
 `
 
 const StyledForm = styled.form`

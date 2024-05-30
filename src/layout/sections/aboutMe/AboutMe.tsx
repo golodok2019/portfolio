@@ -20,7 +20,6 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-  background-color: blue;
   min-height: 30vh;
 `
 

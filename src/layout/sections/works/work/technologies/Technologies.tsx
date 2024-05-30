@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import {Technology} from "./technology/technology";
+import {Technology} from "./technology/Technology";
 
 type TechnologiesPropsType = {
     technologiesList: Array<string>
@@ -9,14 +9,14 @@ type TechnologiesPropsType = {
 export const Technologies = (props: TechnologiesPropsType) => {
     return (
         <StyledTechnologies>
-            {props.technologiesList.map((technologyName)=>{
-                return <Technology technologyName={technologyName}/>
+            {props.technologiesList.map((technologyName, index)=>{
+                return <Technology key={index} technologyName={technologyName}/>
             })}
         </StyledTechnologies>
     );
 };
 
-const StyledTechnologies = styled.div`
+const StyledTechnologies = styled.ul`
   gap: 10px;
   display: flex;
   flex-direction: row;

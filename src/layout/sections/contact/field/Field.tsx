@@ -3,16 +3,19 @@ import styled from "styled-components";
 
 type FieldPropsType = {
     fieldLabel: string
+    inputIdAndName: string
     placeholder?: string
+    inputType?: string
     isTextArea?: boolean
 }
 
 export const Field = (props: FieldPropsType) => {
     return (
         <StyledField>
-            <StyledLabel>{props.fieldLabel}</StyledLabel>
-            {props.isTextArea ? <StyledInput placeholder={props.placeholder} as={"textarea"}/> :
-                <StyledInput placeholder={props.placeholder}/>}
+            <StyledLabel htmlFor={props.inputIdAndName}>{props.fieldLabel}</StyledLabel>
+            {props.isTextArea ?
+                <StyledInput id={props.inputIdAndName} name={props.inputIdAndName} placeholder={props.placeholder} as={"textarea"}/> :
+                <StyledInput id={props.inputIdAndName} name={props.inputIdAndName} placeholder={props.placeholder} type={props.inputType}/>}
         </StyledField>
     );
 };
@@ -24,4 +27,6 @@ const StyledField = styled.div`
 
 const StyledLabel = styled.label``
 
-const StyledInput = styled.input``
+const StyledInput = styled.input.attrs((type) => ({
+    type: type || "text"
+}))``
