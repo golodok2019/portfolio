@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import { FlexContainer } from '../../components/FlexContainer';
 import {Menu} from "../../components/menu/Menu";
 import {MainContainer} from "../../styles/MainContainer";
 
@@ -8,12 +7,17 @@ export const Header = () => {
     return (
         <StyledHeader>
             <MainContainer>
-                <FlexContainer justifyContent={"center"}>
-                    <Menu/>
-                </FlexContainer>
+                <Menu/>
             </MainContainer>
         </StyledHeader>
     );
 };
 
-const StyledHeader = styled.header``
+const StyledHeader = styled.header`
+  padding: 40px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+`

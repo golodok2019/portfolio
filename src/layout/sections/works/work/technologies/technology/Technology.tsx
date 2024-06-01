@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 type TechnologyPropsType = {
     technologyName: string
-    key: number
+
 }
 
 export const Technology = (props: TechnologyPropsType) => {
     return (
-        <StyledTechnology key={props.key}>
+        <StyledTechnology>
             <TechnologyName>{props.technologyName}</TechnologyName>
         </StyledTechnology>
     );

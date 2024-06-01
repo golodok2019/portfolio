@@ -1,32 +1,46 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import {ContactLink} from "../ContactLink";
 
 export const Menu = () => {
     return (
         <StyledMenu role={"menu"}>
-            <ul>
+            <StyledList>
                 <li role={"menuitem"}>
-                    <a href={"/#"}>Home</a>
+                    <StyledLink href={"/#"}>Home</StyledLink>
                 </li>
                 <li role={"menuitem"}>
-                    <a href={"/#"}>Projects</a>
+                    <StyledLink href={"/#"}>Projects</StyledLink>
                 </li>
                 <li role={"menuitem"}>
-                    <a href={"/#"}>Contact</a>
+                    <ContactLink href={"/#"}>Contact</ContactLink>
                 </li>
-            </ul>
+            </StyledList>
         </StyledMenu>
     );
 };
 
 const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 20px;
+
+`
+
+const StyledList = styled.ul`
+  display: flex;
+  gap: 9rem;
+
+  li:nth-child(2) {
+    margin-left: auto;
   }
-  
-  a {
-    color: ${theme.darkTheme.colors.font};
+`
+
+const StyledLink = styled.a`
+  color: ${theme.darkTheme.colors.font};
+  font-size: 16px;
+  font-weight: 500;
+
+  &:hover {
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%) 1;
   }
 `

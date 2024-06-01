@@ -6,6 +6,4 @@ export const MainContainer = styled.div`
   min-height: 100%;
   padding: 0 15px;
   margin: 0 auto;
-  //Border temporary TODO: delete border
-  border: 1px solid red; 
 `
