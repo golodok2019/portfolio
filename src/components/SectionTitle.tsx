@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
 export const SectionTitle = styled.h2`
-    color: red;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
 `

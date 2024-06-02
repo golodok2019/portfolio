@@ -6,6 +6,7 @@ type SkillPropsType = {
     iconId: string
     skillTitle: string
     viewBox?: string
+    firstElement?: boolean
 }
 
 export const Skill = (props: SkillPropsType) => {
@@ -22,8 +23,14 @@ const StyledSkill = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 20%;
+  margin: 0 auto;
 `
 
 const SkillTitle = styled.h3`
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.5em;
 `

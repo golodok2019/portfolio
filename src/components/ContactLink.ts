@@ -8,4 +8,5 @@ export const ContactLink = styled.a`
   color: ${theme.darkTheme.colors.fontSecondary};
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 `

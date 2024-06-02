@@ -5,7 +5,8 @@ export const theme = {
             workBg: "#627070",
 
             font: "#BDEBEA",
-            fontSecondary: "#252728FF"
+            fontSecondary: "#252728FF",
+            postFont: "#D7E5EC"
         }
     }
 }
