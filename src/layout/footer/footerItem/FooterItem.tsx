@@ -7,6 +7,7 @@ import {theme} from "../../../styles/Theme";
 type FooterItemPropsType = {
     iconId: string
     caption: string
+    viewBox?: string
 }
 
 export const FooterItem = (props: FooterItemPropsType) => {
@@ -14,7 +15,7 @@ export const FooterItem = (props: FooterItemPropsType) => {
         <StyledFooterItem>
             <FlexContainer direction={"column"} alignItems={"center"} gap={"9px"}>
                 <FooterLink>
-                    <Icon iconId={props.iconId}/>
+                    <Icon iconId={props.iconId} viewBox={props.viewBox}/>
                     <Caption>{props.caption}</Caption>
                 </FooterLink>
             </FlexContainer>
