@@ -30,7 +30,9 @@ const SkillTitle = styled.h3`
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5em;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-top: 0.5em;
+  letter-spacing: 0.13em;
+  text-align: center;
+
 `

@@ -33,4 +33,8 @@ export const GlobalStyles = createGlobalStyle`
     background-color: unset;
     border: none;
   }
+
+  section + section {
+    margin-top: 130px;
+  }
 `

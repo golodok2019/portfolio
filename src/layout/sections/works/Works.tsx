@@ -27,6 +27,4 @@ export const Works = () => {
     );
 };
 
-const StyledWorks = styled.section`
-  min-height: 100vh;
-`
+const StyledWorks = styled.section``

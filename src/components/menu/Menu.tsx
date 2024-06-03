@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
-import {ContactLink} from "../ContactLink";
+import {LinkStyledLikeButton} from "../LinkStyledLikeButton";
 
 export const Menu = () => {
     return (
@@ -14,7 +14,7 @@ export const Menu = () => {
                     <StyledLink href={"/#"}>Projects</StyledLink>
                 </li>
                 <li role={"menuitem"}>
-                    <ContactLink href={"/#"}>Contact</ContactLink>
+                    <LinkStyledLikeButton href={"/#"}>Contact</LinkStyledLikeButton>
                 </li>
             </StyledList>
         </StyledMenu>

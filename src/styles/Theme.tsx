@@ -6,7 +6,9 @@ export const theme = {
 
             font: "#BDEBEA",
             fontSecondary: "#252728FF",
-            postFont: "#D7E5EC"
+            developmentPostFont: "#D7E5EC",
+            placeholderColor: "#919B9B",
+            socialLinkColor: "#1F2626"
         }
     }
 }

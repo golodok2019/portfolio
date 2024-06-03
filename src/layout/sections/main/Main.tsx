@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 import photo from "../../../assets/images/profile.webp";
-import {ContactLink} from '../../../components/ContactLink';
+import {LinkStyledLikeButton} from '../../../components/LinkStyledLikeButton';
 import {FlexContainer} from "../../../components/FlexContainer";
 import {MainContainer} from "../../../styles/MainContainer";
 import {theme} from "../../../styles/Theme";
+import {Icon} from "../../../components/icon/Icon";
 
 export const Main = () => {
     return (
@@ -20,10 +21,11 @@ export const Main = () => {
                         <StyledText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
                             sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
                             sunt.</StyledText>
-                        <ContactLink>Contact Me</ContactLink>
+                        <LinkStyledLikeButton>Contact Me</LinkStyledLikeButton>
                     </TextContainer>
                     <Photo src={photo} alt={"My photo"}/>
                 </FlexContainer>
+                <Icon iconId={"scrollDarkTheme"}/>
             </MainContainer>
         </StyledMain>
     );
@@ -33,6 +35,7 @@ const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
   align-items: center;
+  text-align: center;
 `
 const Photo = styled.img`
   width: 500px;
@@ -43,11 +46,10 @@ const Photo = styled.img`
 const StyledName = styled.h2`
   font-size: 5rem;
   font-weight: 600;
-  margin: 10px 0 11px;
 `
 
 const StyledTitle = styled.h1`
-  color: ${theme.darkTheme.colors.postFont};
+  color: ${theme.darkTheme.colors.developmentPostFont};
   font-family: Tinos, serif;
   font-size: 20px;
   font-weight: 400;
@@ -63,17 +65,21 @@ const StyledGradientContainer = styled.div`
 const StyledText = styled.p`
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: .1em;
-  margin: 0 0 41px;
+  letter-spacing: 0.04em;
 `
 
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 600px;
+  text-align: left;
   
-  a {
-    width: 134px;
+  ${StyledName}{
+    margin: 10px 0 11px;
   }
   
+  ${LinkStyledLikeButton} {
+    width: 134px;
+    margin: 41px 0 0;
+  }
 `

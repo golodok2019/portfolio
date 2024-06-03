@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexContainer} from '../../components/FlexContainer';
-import {Icon} from "../../components/icon/Icon";
+import {FooterItem} from "./footerItem/FooterItem";
 
 export const Footer = () => {
     return (
@@ -9,21 +9,9 @@ export const Footer = () => {
             <FlexContainer direction={"column"} alignItems={"center"}>
                 <Name>Aliaksei Holad</Name>
                 <FooterItemsList>
-                    <FooterItem>
-                        <FooterLink aria-label={"LinkedIn"} >
-                            <Icon iconId={"linkedInDarkTheme"}/>
-                        </FooterLink>
-                    </FooterItem>
-                    <FooterItem>
-                        <FooterLink aria-label={"Mail"} >
-                            <Icon iconId={"mail"}/>
-                        </FooterLink>
-                    </FooterItem>
-                    <FooterItem>
-                        <FooterLink aria-label={"GitHub"} >
-                            <Icon iconId={"gitHubDarkTheme"}/>
-                        </FooterLink>
-                    </FooterItem>
+                    <FooterItem iconId={"linkedInDarkTheme"} caption={"linkedin"}/>
+                    <FooterItem iconId={"mail"} caption={"mail"}/>
+                    <FooterItem iconId={"gitHubDarkTheme"} caption={"github"}/>
                 </FooterItemsList>
                 <Copyright>© 2024 Aliaksei Holad, All Rights Reserved.</Copyright>
             </FlexContainer>
@@ -32,18 +20,24 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  min-height: 20vh;
+  margin: 190px 0 50px;
+  gap: 40px;
 `
 
-const Name = styled.span``
+const Name = styled.span`
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: capitalize;
+`
 
 const FooterItemsList = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 70px;
+  margin: 40px 0;
 `
 
-const FooterItem = styled.li``
-
-const FooterLink = styled.a``
-
-const Copyright = styled.small``
+const Copyright = styled.small`
+  opacity: 0.5;
+  text-transform: capitalize;
+`

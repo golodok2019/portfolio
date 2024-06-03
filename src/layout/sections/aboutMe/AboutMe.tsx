@@ -26,19 +26,18 @@ export const AboutMe = () => {
 };
 
 const StyledAboutMe = styled.section`
-  min-height: 30vh;
-  
-  h2 {
+  ${SectionTitle} {
     margin-left: 1.5rem;
   }
-  
 `
 
 const Text = styled.p`
+
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5em;
   padding-left: 1.5rem;
+  letter-spacing: 0.04em;
   position: relative;
   
   &::before {
