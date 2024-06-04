@@ -11,7 +11,7 @@ export const Footer = () => {
                 <FooterItemsList>
                     <FooterItem iconId={"linkedInDarkTheme"} caption={"linkedin"}/>
                     <FooterItem iconId={"mail"} caption={"mail"}/>
-                    <FooterItem iconId={"gitHubDarkTheme"} caption={"github"} viewBox={"0 -2 38 38"}/>
+                    <FooterItem iconId={"gitHubDarkTheme"} caption={"github"} viewBox={"0 -3 38 38"}/>
                 </FooterItemsList>
                 <Copyright>© 2024 Aliaksei Holad, All Rights Reserved.</Copyright>
             </FlexContainer>
