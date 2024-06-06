@@ -27,8 +27,8 @@ const StyledTechnology = styled.li`
   background-image: linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%);
   border-radius: 4px;
   padding: 8px 16px;
-  font-size: 10px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: ${theme.darkTheme.colors.socialLinkColor};

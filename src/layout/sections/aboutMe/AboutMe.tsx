@@ -10,7 +10,6 @@ export const AboutMe = () => {
             <MainContainer>
                 <SectionTitle>About me</SectionTitle>
                 <FlexContainer>
-                    <Line/>
                     <Text>The long barrow was built on land previously inhabited in the Mesolithic period. It consisted
                         of a
                         sub-rectangular earthen tumulus, estimated to have been 15 metres (50 feet) in length, with a
@@ -49,8 +48,4 @@ const Text = styled.p`
     height: 100%;
     border-radius: 2px;
   }
-`
-
-const Line = styled.div`
-  
 `

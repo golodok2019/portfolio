@@ -2,11 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 import {Technologies} from "./technologies/Technologies";
 import {theme} from "../../../../styles/Theme";
+import {LinkStyledLikeButton} from '../../../../components/LinkStyledLikeButton';
 
 type WorkPropsType = {
     title: string
     text: string
-    src: string
+    srcWebp: string
+    srcPng: string
     alt: string
     technologiesList: Array<string>
 }
@@ -14,7 +16,13 @@ type WorkPropsType = {
 export const Work = (props: WorkPropsType) => {
     return (
         <StyledWork>
-            <Image src={props.src} alt={props.alt}/>
+            <ImageContainer>
+                <picture>
+                    <source srcSet={props.srcWebp} type={"image/webp"}/>
+                    <Image src={props.srcPng} alt={props.alt}/>
+                </picture>
+                <LinkStyledLikeButton>View Code</LinkStyledLikeButton>
+            </ImageContainer>
             <InformationContainer>
                 <Title>{props.title}</Title>
                 <Technologies technologiesList={props.technologiesList}/>
@@ -54,4 +62,34 @@ const Text = styled.p`
 const InformationContainer = styled.div`
   margin-top: 29px;
   padding: 0 26px;
+`
+
+const ImageContainer = styled.div`
+  position: relative;
+
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+    }
+
+    ${LinkStyledLikeButton} {
+      opacity: 1;
+    }
+  }
+
+  ${LinkStyledLikeButton} {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
 `

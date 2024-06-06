@@ -15,7 +15,8 @@ export const Field = (props: FieldPropsType) => {
         <StyledField>
             <StyledLabel htmlFor={props.inputIdAndName}>{props.fieldLabel}</StyledLabel>
             {props.isTextArea ?
-                <StyledInput id={props.inputIdAndName} name={props.inputIdAndName} placeholder={props.placeholder} as={"textarea"}/>:
+                <StyledInput id={props.inputIdAndName} name={props.inputIdAndName} placeholder={props.placeholder}
+                             as={"textarea"}/> :
                 <StyledInput id={props.inputIdAndName} name={props.inputIdAndName} placeholder={props.placeholder}
                              type={props.inputType}/>}
         </StyledField>
@@ -26,7 +27,7 @@ const StyledField = styled.div`
   display: flex;
   flex-direction: column;
 
-  textarea{
+  textarea {
     resize: none;
     height: 165px;
   }

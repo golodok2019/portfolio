@@ -23,7 +23,7 @@ const StyledSkill = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0 auto;
+  flex-grow: 1;
 `
 
 const SkillTitle = styled.h3`

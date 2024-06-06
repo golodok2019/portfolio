@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import photo from "../../../assets/images/profile.webp";
+import profileWebp from "../../../assets/images/profile.webp";
+import profilePng from "../../../assets/images/profile.png"
 import {LinkStyledLikeButton} from '../../../components/LinkStyledLikeButton';
 import {FlexContainer} from "../../../components/FlexContainer";
 import {MainContainer} from "../../../styles/MainContainer";
@@ -23,7 +24,10 @@ export const Main = () => {
                             sunt.</StyledText>
                         <LinkStyledLikeButton>Contact Me</LinkStyledLikeButton>
                     </TextContainer>
-                    <Photo src={photo} alt={"My photo"}/>
+                    <picture>
+                        <source srcSet={profileWebp} type={"image/webp"}/>
+                        <Photo src={profilePng} alt={"My photo"}/>
+                    </picture>
                 </FlexContainer>
                 <Icon iconId={"scrollDarkTheme"}/>
             </MainContainer>
@@ -37,6 +41,7 @@ const StyledMain = styled.section`
   align-items: center;
   text-align: center;
 `
+
 const Photo = styled.img`
   width: 500px;
   height: 500px;

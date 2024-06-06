@@ -11,13 +11,13 @@ export const Skills = () => {
             <MainContainer>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexContainer wrap={"wrap"} gap={"120px"} justifyContent={"space-between"}>
+                    <Skill iconId={"reactJs"} skillTitle={"REACT JS"}/>
                     <Skill iconId={"javaScript"} skillTitle={"JAVASCRIPT"}/>
                     <Skill iconId={"typeScript"} skillTitle={"TYPESCRIPT"}/>
                     <Skill iconId={"mongoDb"} skillTitle={"MONGO DB"}/>
                     <Skill iconId={"jest"} skillTitle={"JEST"}/>
                     <Skill iconId={"expressJs"} skillTitle={"EXPRESS JS"}/>
                     <Skill iconId={"docker"} skillTitle={"DOCKER"}/>
-                    <Skill iconId={"reactJs"} skillTitle={"REACT JS"}/>
                     <Skill iconId={"reactNative"} skillTitle={"REACT NATIVE"}/>
                     <Skill iconId={"redux"} skillTitle={"REDUX"}/>
                     <Skill iconId={"git"} skillTitle={"GIT"} viewBox={"0 0 256 256"}/>
