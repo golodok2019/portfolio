@@ -8,7 +8,14 @@ export const theme = {
             fontSecondary: "#252728FF",
             developmentPostFont: "#D7E5EC",
             placeholderColor: "#919B9B",
-            socialLinkColor: "#1F2626"
+            fontColorOnGradient: "#1F2626"
         }
+    },
+
+    media : {
+        mobile: "screen and (max-width: 576px)",
+        tablet: "screen and (max-width: 768px)",
+        desktop: "screen and (min-width: 1140px)",
+        mainContainerWrap: "screen and (max-width: 1096px)"
     }
 }

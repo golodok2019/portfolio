@@ -12,7 +12,7 @@ export const Works = () => {
         <StyledWorks>
             <MainContainer>
                 <SectionTitle>Projects</SectionTitle>
-                <FlexContainer justifyContent={"space-between"} wrap={"wrap"} alignItems={"center"}>
+                <FlexContainer justifyContent={"space-between"} wrap={"wrap"} alignItems={"flex-start"} gap={"20px"}>
                     <Work title={"title project"}
                           text={"Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."}
                           srcWebp={projectImageWebp}
@@ -25,7 +25,7 @@ export const Works = () => {
                           srcWebp={projectImageWebp}
                           srcPng={projectImagePng}
                           alt={"My project"}
-                          technologiesList={["C#", "typescript", "React"]}/>
+                          technologiesList={["C#", "typescript", "React", "Postgre", "CSS", "HTML"]}/>
                 </FlexContainer>
             </MainContainer>
         </StyledWorks>

@@ -22,15 +22,28 @@ export const Menu = () => {
 };
 
 const StyledMenu = styled.nav`
-
+  position: relative;
+  top: 40px;
+  
+  @media ${theme.media.mobile}{
+    top: 20px;
+  }
 `
 
 const StyledList = styled.ul`
   display: flex;
-  gap: 9rem;
 
   li:nth-child(2) {
     margin-left: auto;
+  }
+  
+  li:last-child {
+    margin-left: 90px;
+    
+    @media ${theme.media.mobile}
+    {
+      margin-left: 35px;
+    }
   }
 `
 

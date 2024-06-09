@@ -7,21 +7,21 @@ import {FlexContainer} from "../../../components/FlexContainer";
 import {MainContainer} from "../../../styles/MainContainer";
 import {theme} from "../../../styles/Theme";
 import {Icon} from "../../../components/icon/Icon";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
     return (
         <StyledMain>
             <MainContainer>
-                <FlexContainer alignItems={"center"} justifyContent={"space-between"}>
+                <FlexContainer alignItems={"center"} justifyContent={"space-around"} wrap={"wrap-reverse"}>
                     <TextContainer>
                         {/* H1 on WEB DEVELOPER for a better match when searching the internet */}
                         <StyledTitle>web developer</StyledTitle>
                         <StyledGradientContainer>
                             <StyledName>Aliaksei Holad</StyledName>
                         </StyledGradientContainer>
-                        <StyledText>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                            sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat
-                            sunt.</StyledText>
+                        <StyledText>Good day! This is my portfolio. Here, you can get to know more about me, my skills,
+                            and view some of my work.</StyledText>
                         <LinkStyledLikeButton>Contact Me</LinkStyledLikeButton>
                     </TextContainer>
                     <picture>
@@ -29,7 +29,8 @@ export const Main = () => {
                         <Photo src={profilePng} alt={"My photo"}/>
                     </picture>
                 </FlexContainer>
-                <Icon iconId={"scrollDarkTheme"}/>
+                <a href={"/#"} aria-label={"Link to the bottom"}><Icon iconId={"scrollDarkTheme"} width={"32"}
+                                                                       height={"32"} viewBox={"0 0 32 32"}/></a>
             </MainContainer>
         </StyledMain>
     );
@@ -40,24 +41,31 @@ const StyledMain = styled.section`
   display: flex;
   align-items: center;
   text-align: center;
+
+  @media ${theme.media.mainContainerWrap} {
+    svg {
+      margin-top: 30px;
+    }
+  }
 `
 
 const Photo = styled.img`
   width: 500px;
   height: 500px;
   object-fit: cover;
+
+  @media ${theme.media.mobile} {
+    width: 340px;
+    height: 340px;
+  }
 `
 
 const StyledName = styled.h2`
-  font-size: 5rem;
-  font-weight: 600;
+  ${font({weight: 600, FMax: 72, FMin: 40, color: "transparent"})};
 `
 
 const StyledTitle = styled.h1`
-  color: ${theme.darkTheme.colors.developmentPostFont};
-  font-family: Tinos, serif;
-  font-size: 20px;
-  font-weight: 400;
+  ${font({weight: 400, FMax: 20, FMin: 16, color: theme.darkTheme.colors.developmentPostFont, family: "Tinos, serif"})};
   text-transform: uppercase;
 `
 
@@ -68,23 +76,33 @@ const StyledGradientContainer = styled.div`
 `
 
 const StyledText = styled.p`
-  font-size: 16px;
-  font-weight: 400;
   letter-spacing: 0.04em;
 `
 
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 550px;
   text-align: left;
-  
-  ${StyledName}{
-    margin: 10px 0 11px;
+
+  ${StyledName} {
+    margin: 11px;
   }
-  
+
   ${LinkStyledLikeButton} {
-    width: 134px;
-    margin: 41px 0 0;
+    width: 140px;
+    margin: 30px 0 0;
+  }
+
+  @media ${theme.media.mainContainerWrap} {
+    ${StyledName} {
+      margin: 12px 0 16px;
+    }
+
+    ${LinkStyledLikeButton} {
+      margin: 16px auto 0;
+    }
+
+    text-align: center;
   }
 `

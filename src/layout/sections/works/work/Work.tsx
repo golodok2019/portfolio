@@ -35,8 +35,13 @@ export const Work = (props: WorkPropsType) => {
 const StyledWork = styled.div`
   background-color: ${theme.darkTheme.colors.workBg};
   border-radius: 6px;
-  max-width: 522px;
-  width: 100%;
+  width: 362px;
+  flex-grow: 1;
+  
+  @media ${theme.media.desktop}{
+    max-width: 522px;
+  }
+  
 `
 
 const Image = styled.img`
@@ -53,8 +58,6 @@ const Title = styled.h3`
 `
 
 const Text = styled.p`
-  font-size: 16px;
-  font-weight: 400;
   letter-spacing: 0.04em;
   margin-bottom: 31px;
 `
@@ -66,24 +69,7 @@ const InformationContainer = styled.div`
 
 const ImageContainer = styled.div`
   position: relative;
-
-  &:hover {
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
-    }
-
-    ${LinkStyledLikeButton} {
-      opacity: 1;
-    }
-  }
-
+  
   ${LinkStyledLikeButton} {
     position: absolute;
     left: 50%;
@@ -91,5 +77,36 @@ const ImageContainer = styled.div`
     transform: translate(-50%, -50%);
     opacity: 0;
   }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+  }
 
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    ${LinkStyledLikeButton} {
+      opacity: 1;
+    }
+  }
+
+  @media ${theme.media.tablet}{
+    &::before {
+      opacity: 1;
+    }
+
+    ${LinkStyledLikeButton} {
+      opacity: 1;
+    }
+  }
 `

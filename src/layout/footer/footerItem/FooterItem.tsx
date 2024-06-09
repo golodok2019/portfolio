@@ -27,7 +27,7 @@ const StyledFooterItem = styled.li``
 
 const FooterLink = styled.a`
   //Color for icons
-  color: ${theme.darkTheme.colors.socialLinkColor};
+  color: ${theme.darkTheme.colors.fontColorOnGradient};
   height: 38px;
   width: 38px;
   border-radius: 50%;

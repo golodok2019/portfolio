@@ -15,11 +15,15 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  padding: 40px 0;
+  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99999;
   background-color: ${theme.darkTheme.colors.primaryBg};
+  
+  @media ${theme.media.mobile}{
+    height: 60px;
+  }
 `
