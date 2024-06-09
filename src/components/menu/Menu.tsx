@@ -5,8 +5,8 @@ import {LinkStyledLikeButton} from "../LinkStyledLikeButton";
 
 export const Menu = () => {
     return (
-        <StyledMenu role={"menu"}>
-            <StyledList>
+        <StyledMenu>
+            <StyledList role={"menu"}>
                 <li role={"menuitem"}>
                     <StyledLink href={"/#"}>Home</StyledLink>
                 </li>
