@@ -1,13 +1,13 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Field} from "./field/Field";
 import {MainContainer} from '../../../styles/MainContainer';
 import {LinkStyledLikeButton} from '../../../components/LinkStyledLikeButton';
+import styled from "styled-components";
 
-export const Contact = () => {
+export const Contact: React.FC = () => {
     return (
-        <StyledContact>
+        <section>
             <MainContainer>
                 <SectionTitle>Contact</SectionTitle>
                 <StyledForm>
@@ -18,14 +18,11 @@ export const Contact = () => {
                     <LinkStyledLikeButton as={"button"} type={"submit"}>Submit</LinkStyledLikeButton>
                 </StyledForm>
             </MainContainer>
-        </StyledContact>
+        </section>
     );
 };
 
-const StyledContact = styled.section`
-`
-
-const StyledForm = styled.form`
+export const StyledForm = styled.form`
   max-width: 532px;
   width: 100%;
   display: flex;

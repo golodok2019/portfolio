@@ -37,7 +37,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   section + section {
-    margin-top: 130px;
+    margin-top: 140px;
   }
 
   p {

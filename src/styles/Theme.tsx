@@ -3,6 +3,7 @@ export const theme = {
         colors: {
             primaryBg: "#041F31",
             workBg: "#222525",
+            lineWorkColor: "#627070",
 
             font: "#BDEBEA",
             fontSecondary: "#252728FF",
@@ -16,6 +17,6 @@ export const theme = {
         mobile: "screen and (max-width: 576px)",
         tablet: "screen and (max-width: 768px)",
         desktop: "screen and (min-width: 1140px)",
-        mainContainerWrap: "screen and (max-width: 1096px)"
+        mainContainerWrap: "screen and (max-width: 1099px)"
     }
 }
