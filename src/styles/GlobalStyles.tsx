@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
     color: ${theme.darkTheme.colors.font};
     line-height: 1.2;
     //Turn on rescale for screens less than 240px
-    min-width: 240px;
+    min-width: 360px;
   }
 
   a {
@@ -37,6 +37,11 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   section + section {
-    margin-top: 130px;
+    margin-top: 140px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
   }
 `

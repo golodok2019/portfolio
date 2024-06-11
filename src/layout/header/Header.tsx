@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
 import {Menu} from "../../components/menu/Menu";
 import {MainContainer} from "../../styles/MainContainer";
+import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-export const Header = () => {
+export const Header: React.FC = () => {
     return (
         <StyledHeader>
             <MainContainer>
@@ -15,11 +15,15 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  padding: 40px 0;
+  height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 99999;
   background-color: ${theme.darkTheme.colors.primaryBg};
+
+  @media ${theme.media.mobile} {
+    height: 60px;
+  }
 `

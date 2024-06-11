@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
-import styled from "styled-components";
+import {S} from "./Skills_Styles";
 
 type SkillPropsType = {
     iconId: string
@@ -9,30 +9,11 @@ type SkillPropsType = {
     firstElement?: boolean
 }
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
     return (
-        <StyledSkill>
+        <S.StyledSkill>
             <Icon iconId={props.iconId} width={"120px"} height={"120px"} viewBox={props.viewBox || "0 0 120 120"}/>
-            <SkillTitle>{props.skillTitle}</SkillTitle>
-        </StyledSkill>
+            <S.SkillTitle>{props.skillTitle}</S.SkillTitle>
+        </S.StyledSkill>
     );
 };
-
-const StyledSkill = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-grow: 1;
-`
-
-const SkillTitle = styled.h3`
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5em;
-  text-transform: uppercase;
-  margin-top: 0.5em;
-  letter-spacing: 0.13em;
-  text-align: center;
-
-`

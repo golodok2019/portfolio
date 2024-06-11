@@ -1,31 +1,84 @@
 import React from 'react';
-import styled from "styled-components";
 import {FlexContainer} from "../../../components/FlexContainer";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skill/Skill";
 import {MainContainer} from "../../../styles/MainContainer";
+import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
-export const Skills = () => {
+const skillData = [
+    {
+        iconId: "reactJs",
+        skillTitle: "react js"
+    },
+    {
+        iconId: "javaScript",
+        skillTitle: "javascript"
+    },
+    {
+        iconId: "typeScript",
+        skillTitle: "typescript"
+    },
+    {
+        iconId: "mongoDb",
+        skillTitle: "mongo db"
+    },
+    {
+        iconId: "jest",
+        skillTitle: "jest"
+    },
+    {
+        iconId: "expressJs",
+        skillTitle: "express js"
+    },
+    {
+        iconId: "docker",
+        skillTitle: "docker"
+    },
+    {
+        iconId: "reactNative",
+        skillTitle: "react native"
+    },
+    {
+        iconId: "redux",
+        skillTitle: "redux"
+    },
+    {
+        iconId: "postgreSql",
+        skillTitle: "postgresql"
+    },
+    {
+        iconId: "git",
+        skillTitle: "git",
+        viewBox: "0 0 256 256"
+    },
+    {
+        iconId: "styledComponents",
+        skillTitle: "styledComponents"
+    },
+]
+
+export const Skills: React.FC = () => {
     return (
+        //TODO: Change to greed
         <StyledSkills>
             <MainContainer>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexContainer wrap={"wrap"} gap={"120px"} justifyContent={"space-between"}>
-                    <Skill iconId={"reactJs"} skillTitle={"REACT JS"}/>
-                    <Skill iconId={"javaScript"} skillTitle={"JAVASCRIPT"}/>
-                    <Skill iconId={"typeScript"} skillTitle={"TYPESCRIPT"}/>
-                    <Skill iconId={"mongoDb"} skillTitle={"MONGO DB"}/>
-                    <Skill iconId={"jest"} skillTitle={"JEST"}/>
-                    <Skill iconId={"expressJs"} skillTitle={"EXPRESS JS"}/>
-                    <Skill iconId={"docker"} skillTitle={"DOCKER"}/>
-                    <Skill iconId={"reactNative"} skillTitle={"REACT NATIVE"}/>
-                    <Skill iconId={"redux"} skillTitle={"REDUX"}/>
-                    <Skill iconId={"git"} skillTitle={"GIT"} viewBox={"0 0 256 256"}/>
-                    <Skill iconId={"styledComponents"} skillTitle={"STYLED COMPONENTS"}/>
+                    {skillData.map((skill, index) => {
+                        return <Skill key={index} iconId={skill.iconId} skillTitle={skill.skillTitle}
+                                      viewBox={skill.viewBox}/>
+                    })}
                 </FlexContainer>
             </MainContainer>
         </StyledSkills>
     );
 };
 
-const StyledSkills = styled.section``
+export const StyledSkills = styled.section`
+  @media ${theme.media.mobile} {
+    ${FlexContainer} {
+      gap: 60px;
+    }
+  }
+`
