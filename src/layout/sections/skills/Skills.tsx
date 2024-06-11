@@ -54,7 +54,7 @@ const skillData = [
     },
     {
         iconId: "styledComponents",
-        skillTitle: "styledComponents"
+        skillTitle: "styled Components"
     },
 ]
 
@@ -76,7 +76,7 @@ export const Skills: React.FC = () => {
 };
 
 export const StyledSkills = styled.section`
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     ${FlexContainer} {
       gap: 60px;
     }
