@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {font} from "../../styles/Common";
 
 const StyledFooter = styled.footer`
-  margin: 190px 0 50px;
+  padding: 190px 0 50px;
   gap: 40px;
 `
 

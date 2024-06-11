@@ -37,7 +37,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   section + section {
-    margin-top: 140px;
+    padding-top: 140px;
+  }
+  
+  section:first-of-type {
+    padding-top: 100px;
+    
+    @media ${theme.media.tablet}{
+      padding-top: 60px;
+    }
   }
 
   p {
